@@ -14,6 +14,22 @@ public class LLText {
 	
 	public String getText(int event) {
 		switch(event) {
+		case -10: text = "Both your\'s and the other player\'s cards are equal, neither is out";
+			break;
+		case -9: text = "Other player is worth more, you are out";
+			break;
+		case -8: text = "Your card is worth more, other player is out";
+			break;
+		case -7: text = "You guessed incorrectly, the chosen player is not out";
+			break;
+		case -6: text = "You guessed correctly, the chosen player is out";
+			break;
+		case -5: text = "Both players are safe due to Handmaiden or out of the round so move onto the next player";
+			break;
+		case -4: text = "The player you chose is currently out, pick another person";
+			break;
+		case -3: text = "The player you chose is currently safe due to the Handmaiden";
+			break;
 		case -2: text = "If you have the King or Prince but have the Countess, you must choose the Countesss";
 			break;
 		case -1: text = "Current Player click the \"SEE\" button and draw a card";
