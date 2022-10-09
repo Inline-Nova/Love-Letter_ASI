@@ -53,43 +53,30 @@ public class Card {
 		
 		switch(type) {
 		case 0: typePic = c0;
-		    System.out.println("type 0");
 			break;
 		case 1: typePic = c1;
-			System.out.println("type 1");
 			break;
 		case 2: typePic = c2;
-			System.out.println("type 2");
 			break;
 		case 3: typePic = c3;
-			System.out.println("type 3");
 			break;
 		case 4: typePic = c4;
-			System.out.println("type 4");
 			break;
-		case 5: typePic = c5;
-			System.out.println("type 5");	
+		case 5: typePic = c5;	
 			break;
 		case 6: typePic = c6;
-			System.out.println("type 6");
 			break;
 		case 7: typePic = c7;
-			System.out.println("type 7");
 			break;
 		case 8: typePic = c8;
-			System.out.println("type 8");
 			break;
 		case 9: typePic = c9;
-			System.out.println("type 9");
 		}
 	}
 	
 	public BufferedImage getCardImg(int idx) {
 		if(idx < 0 || idx > 2) {
 			return null;
-		}
-		if(c9 == null) {
-			System.out.println("fuck 9");
 		}
 		return typePic;
 	}

@@ -5,8 +5,12 @@ public class Player {
 	private int playerNum;
 	
 	public Player(int num) {
-		cards = new Card[3];
+		cards = new Card[2];
 		playerNum = num;
+	}
+	
+	public Player() {
+		cards = new Card[2];
 	}
 	
 	public void changeCard(Card c, int idx) {
@@ -23,14 +27,29 @@ public class Player {
 	
 	public BufferedImage getCardPic(int idx) {
 		if(idx < 0 || idx > 2) return null;
-		if(cards[idx].getCardImg(idx) == null) {
+		/*if(cards[idx].getCardImg(idx) == null) {
 			System.out.println("this");
-		}
+		}*/
 		return cards[idx].getCardImg(idx);
 	}
 	
+	public BufferedImage getPlayerPic(int type) {
+		if(type >-1 && type < 10) {
+			Card tempCard = new Card(type);
+			return tempCard.getCardImg();
+		}
+		return null;
+	}
+	
 	public int getType(int idx) {
+		if(cards[idx] == null) {
+			return -1;
+		}
 		return cards[idx].getType();
+	}
+	
+	public Card getCard(int idx) {
+		return cards[idx];
 	}
 	
 	public String toString() {
